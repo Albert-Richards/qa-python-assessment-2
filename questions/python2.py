@@ -243,8 +243,18 @@ def eight(string,  a):
 
 
 def nine(string1, string2):
-    #for letter in string
-    return False
+    list1=list(set(list(string1)))
+    list2=list(set(list(string2)))
+    count = 0
+    if len(list1) < len(list2):
+        for letter in string1:
+            if letter not in string2:
+                count += 1
+        return count == 0
+    for letter in string2:
+        if letter not in string1:
+            count +=1
+    return count == 0 
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
