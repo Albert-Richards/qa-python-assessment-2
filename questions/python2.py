@@ -31,7 +31,10 @@
 # How does a for loop iterate through a string?
 
 def one(string):
-    return ""
+    output = ""
+    for letter in string:
+        output += letter*3
+    return output 
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -52,7 +55,14 @@ def one(string):
 
 
 def two(number):
-    return False
+    if number == 2:
+        return True
+    if number == 1:
+        return False
+    for i in range(2, number):
+        if number % i == 0:
+            return False
+        return True
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -72,7 +82,7 @@ def two(number):
 
 
 def three(a):
-    return 1
+    return (a + int(str(a)*2) + int(str(a)*3)+int(str(a)*4))
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -104,7 +114,15 @@ def three(a):
 
 
 def four(string1, string2):
-    return ""
+    list1 = list(string1)
+    list2 = list(string2)
+    list3= []
+    for i in range(len(list1)):
+        list3.append(list1[i])
+        list3.append(list2[i])
+    return "".join(list3)
+
+
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
