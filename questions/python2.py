@@ -275,6 +275,16 @@ def nine(string1, string2):
 
 
 def ten(x, y):
-    return []
+    xlist=[]
+    ylist=[]
+    while len(xlist) < x:
+        xlist.append(0)
+    while len(ylist) < y:
+        ylist.append(xlist)
+    for i in range(y):
+        for j in range(x):
+            ylist[i][j] = i*j
+    return ylist
+    
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
